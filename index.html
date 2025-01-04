@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POG Application Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="signup-form">
+      <div class="flex-container">
+        <h1 id="title" class="title">
+          Poggers Squad Esports Team Signup Survey!
+        </h1>
+        <h2 id="sub-title" class="sub-title">
+          Please fill out this survey to apply to join our very own team:
+        </h2>
+        <div id="form" class="form flex-item">
+          <form>
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              id="name"
+              class="name"
+              name="name-submit"
+              placeholder="Name: "
+              required
+            /><br />
+
+            <label for="email">Email (so we can contact you): </label>
+            <input
+              type="email"
+              id="email"
+              class="email"
+              name="email-submit"
+              placeholder="Email: "
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required
+            /><br />
+
+            <label for="username">Enter your Username/Gamer Handle: </label>
+            <input
+              type="text"
+              id="username"
+              class="username"
+              name="username-submit"
+              placeholder="Username: "
+              required
+            /><br />
+
+            <div class="game-box">
+              <p class="game-text">
+                Which of these games are you willing to play for our team?
+                <br />(Please select at least one; for the time being I cannot
+                make this required. Once I learn Javascript I can make this
+                required, but for the time being, please select at least one.)
+              </p>
+            </div>
+            <div class="games-options">
+              <fieldset class="games">
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox"
+                    name="game"
+                    value="smash-ultimate"
+                  />
+                  Super Smash Bros. Ultimate</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox"
+                    name="game"
+                    value="smash-melee"
+                  />
+                  Super Smash Bros. Melee</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox"
+                    name="game"
+                    value="brawl-stars"
+                  />
+                  Brawl Stars</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox"
+                    name="game"
+                    value="fortnite"
+                  />
+                  Fortnite</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox"
+                    name="game"
+                    value="pokemon-smogon"
+                  />
+                  Pokemon: Smogon Format (Single Battles)</label
+                ><br />
+                <label
+                  ><input
+                    type="checkbox"
+                    class="checkbox"
+                    name="game"
+                    value="pokemon-vgc"
+                  />
+                  Pokemon: VGC Format (Double Battles)</label
+                ><br />
+              </fieldset>
+            </div>
+            <div class="exp-box">
+              <p class="exp-text">
+                How experienced would you say you are with the following games
+                you chose?
+              </p>
+              <fieldset class="exp" aria-required="true">
+                <label
+                  ><input type="radio" name="exp" value="not-at-all" required />
+                  Not at all</label
+                ><br />
+                <label
+                  ><input type="radio" name="exp" value="some-basics" /> I know
+                  some basics, and have been playing for a little bit, but I'm
+                  still not great</label
+                ><br />
+                <label
+                  ><input type="radio" name="exp" value="quite-experienced" /> I
+                  am quite experienced and have played for a while</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="exp"
+                    value="tournament-experienced"
+                  />
+                  I have competed in tournaments/professional level
+                  before</label
+                ><br />
+              </fieldset>
+            </div>
+            <div class="age-box">
+              <p class="age-text">
+                Select your age, so we know which age division you could enter:
+              </p>
+            </div>
+            <div class="range-bar">
+              <input
+                type="range"
+                name="age"
+                id="age"
+                class="age-bar"
+                value="30"
+                step="1"
+                min="10"
+                max="40"
+                oninput="this.nextElementSibling.value = this.value"
+                required
+              />
+              <output for="age" id="rangeValue">30</output><br />
+            </div>
+
+            <div class="region-select">
+              <p class="region-text">Select your Region:</p>
+              <select
+                id="region"
+                name="region"
+                placeholder="Please Select"
+                required
+              >
+                <option value="" disabled selected>--Please select--</option>
+                <option value="NA">North America</option>
+                <option value="EMEA">Europe, Middle East & Africa</option>
+                <option value="APAC">Asia Pacific</option>
+                <option value="LATAM">Latin & South America</option></select
+              ><br />
+            </div>
+
+            <div class="text-box">
+              <p class="desc-text">
+                Give us an optional description about yourself! We'd love to
+                learn something about you!!!
+              </p>
+              <textarea
+                placeholder="Tell Us About Yourself!!!"
+                rows="6"
+                cols="45"
+              ></textarea
+              ><br />
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <p>© 2024 Poggers Squad Esports. All Rights Reserved.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.youtube.com/@HerwakNic"
+            target="_blank"
+            class="icon"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
